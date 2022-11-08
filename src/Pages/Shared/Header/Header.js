@@ -5,12 +5,10 @@ import logo from '../../../assets/logo.png'
 const Header = () => {
 
     const menuItems = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/'>hhkj</Link></li>
-        <li><Link to='/'>login</Link></li>
+        <li className='font-semibold'><Link to='/'>Home</Link></li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar h-20 bg-black">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
