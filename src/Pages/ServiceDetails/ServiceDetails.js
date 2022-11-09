@@ -20,16 +20,16 @@ const ServiceDetails = () => {
 
                         <div className="lg:w-1/2">
                             <PhotoProvider>
-                                <PhotoView src={service.image}>
-                                    <img src={service.image} alt="Shoes" className="rounded-3xl " />
+                                <PhotoView src={image}>
+                                    <img src={image} alt="pic" className="rounded-3xl " />
                                 </PhotoView>
                             </PhotoProvider>
-                            <p className='text-center text-2xl mt-8'>PRICE: ${service.price}</p>
+                            <p className='text-center text-2xl mt-8'>PRICE: ${price}</p>
                         </div>
 
                         <div className="lg:w-1/2">
-                            <h1 className='text-center text-3xl'>{service.name}</h1>
-                            <p className='m-5 text-justify'>{service.details}</p>
+                            <h1 className='text-center text-3xl'>{serviceName}</h1>
+                            <p className='m-5 text-justify'>{details}</p>
                         </div>
 
                     </div>

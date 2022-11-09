@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Reviews = ({review}) => {
+const Reviews = ({review, handleDelete}) => {
     const {_id, serviceName, details, image} = review;
     return (
         <div>
@@ -13,8 +13,8 @@ const Reviews = ({review}) => {
                     </h2>
                     <p>Your Review: {details}</p>
                     <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
+                        <button onClick={() => handleDelete(_id)}>Delete</button>
+                        <button>Edit Review</button>
                     </div>
                 </div>
             </div>
