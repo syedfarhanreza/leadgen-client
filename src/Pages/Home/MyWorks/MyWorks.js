@@ -9,7 +9,7 @@ import picture6 from '../../../assets/MyWorks/picture6.jpg'
 const MyWorks = () => {
     return (
         <div className='mb-10'>
-            <h1 className='text-center text-5xl font-semibold text-green-600 mb-10'>--------- My Works ---------</h1>
+            <h1 className='text-center text-3xl font-semibold text-green-600 mb-10'>--------- My Works ---------</h1>
             <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12 justify-items-center">
             <div className="card w-96 shadow-xl rounded">
                 <figure className="p-10  bg-white    rounded">
