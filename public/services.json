@@ -1,7 +1,6 @@
 [
     {
-        "id": "01",
-        "name": "Wedding Photography",
+        "serviceName": "Wedding Photography",
         "image": "https://i.ibb.co/k4DWGMJ/WedCover.jpg",
         "details": "Wedding photography is a specialty in photography that is primarily focused on the photography of events and activities relating to weddings. It may include other types of portrait photography of the couple before the official wedding day, such as a pre-wedding engagement session (photographs are later used for the couple's wedding invitations). On the official wedding day, the photographer(s) will attempt to provide portrait photography, as well as documentary photography coverage to document the different wedding events and rituals throughout the wedding days.",
         "price": "79",
@@ -15,8 +14,7 @@
         }
     },
     {
-        "id": "02",
-        "name": "Sports Photography",
+        "serviceName": "Sports Photography",
         "image": "https://i.ibb.co/t8XcDQ8/sports-Cover.jpg",
         "details": "Sports photography is a type of photography that covers every sport and sporting event, capturing the action of a game and behind the scenes of the players. This type of photography helps to promote brands, the players, as well as the sport.The industry of sports photography can be a highly appealing one - the ability to take in sporting events or the potential of being a part of professional sport is a dream to many, but the competitiveness of the industry and the challenge of shooting moving subjects can feel daunting. If you have an interest in doing a deeper dive into the world of sports photography and getting more involved in action photography, then look no further. We've compiled a guide to get started as a sports photographer from breaking down the way to gain experience and break into the industry, to the technical aspects you'll need, right up to the equipment.",
         "price": "69",
@@ -30,8 +28,7 @@
         }
     },
     {
-        "id": "03",
-        "name": "Travel Photography",
+        "serviceName": "Travel Photography",
         "image": "https://i.ibb.co/FYqby2N/travel-Cover.jpg",
         "details": "Travel photography is the broadest photography genre in terms of all the different subjects it covers. It encompasses numerous other areas of photography, such as street, landscape, or architecture photography. This is why it takes a lot more than mere photographic knowledge to excel as a travel photographer. A good travel photographer must be flexible, well-organized and outgoing. Flexible to adapt to time-related challenges (e.g. waking up early, staying up late). Well-organized to plan photographic trips to the last detail. Outgoing because, well, you can go a long way with a smile if you plan to, say, take portraits of total strangers in faraway lands. Learning a foreign language or three wouldn't hurt either. However, there's something unique about travel photography that makes it stand out from all other photography genres. The purpose of travel photography goes beyond just shooting a spectacular image. Travel photography is a means to tell a story, to inspire, and, above all, to educate people on the diversity of our beautiful world.",
         "price": "99",
@@ -45,8 +42,7 @@
         }
     },
     {
-        "id": "04",
-        "name": "Product Photography",
+        "serviceName": "Product Photography",
         "image": "https://i.ibb.co/HP3MFMG/product-Cover.png",
         "details": "More specific than working in advertising, product photography is a great specialization. Think about all of the products you have recently shopped for: everything needs to be photographed. The photos are used for online and print catalogs, as well as for labels and packaging. Most product photography is studio based, with careful control of backgrounds, shadows, and lighting. Studio rentals can be fairly expensive so consider building a home photography studio on a budget. Product photography covers a lot of ground. Food photography is a specialized niche, and restaurants need to advertise their meals and create their menus. Jewelry is another favorite type of product photography since this requires the perfect balance of light and preparation. While some product shoots might involve models, many times you will be working solo in a studio doing still life photographs of small objects.",
         "price": "45",
@@ -60,8 +56,7 @@
         }
     },
     {
-        "id": "05",
-        "name": "Architecture Photography",
+        "serviceName": "Architecture Photography",
         "image": "https://i.ibb.co/WGxKZvN/architecture-Cover.jpg",
         "details": "Architecture photography (also referred to as building photography or structure photography) generally means photography that focuses on buildings. It can include shooting building exteriors and interiors, as well as bridges, other structures, and cityscapes.Architectural photography is a genre of photography that focuses on capturing photographs of buildings or structures. Hence, it also involves photographing the interiors and exteriors of buildings, bridges, structures, and cityscapes. When compared to other photography fields, this kind of photography is less dynamic as it demands you to spend a lot of time contemplating over a scene or an environment. As a result, you may not need a speedy or continuous shooting mode camera. Still, you will have to focus on the image's quality. Additionally, you must be ready to use the editing tools, know how to fit a building into a frame, and integrate the rules of composition. Architectural photography was born in the 1870's when the famous architectural photographer Albert Levy began to click photos of older buildings. Later, modern buildings were photographed by the American mid-century modernist Julius Shulman.",
         "price": "59",
@@ -75,8 +70,7 @@
         }
     },
     {
-        "id": "06",
-        "name": "Food Photography",
+        "serviceName": "Food Photography",
         "image": "https://i.ibb.co/7gzm208/food.png",
         "details": "The ability to take mouthwatering shots of food can help you score commercial gigs creating restaurant ads, menu photos, and images for hospitality websites. It's also a great skill to build if you want to post appetizing shots on social media. Food photographers can even license out their work as stock photography. Learn the tricks of the trade to help you cook up some good food photos. Well, simply speaking, it is photographs of food. But is that it? Well, no. Like any other genre of photography, food photography is an art and it can be used to breathe new life or give a whole new dimension to the food we eat. It can also be used commercially for advertising, marketing and more. Professional food photography is not just something for Instagram, it is a serious commercial venture. Restaurants make use of food photography for their menus and advertisements. You can also see food photography being used for food packaging etc. It can, in fact, be a very lucrative profession.",
         "price": "19.99",
@@ -90,8 +84,7 @@
         }
     },
     {
-        "id": "07",
-        "name": "Automotive Photography",
+        "serviceName": "Automotive Photography",
         "image": "https://i.ibb.co/xSHWLys/automotive.png",
         "details": "Being paid to take photos of fancy cars must be every schoolboy's dream, but there's a lot more to automotive photography than meets the eye and it often doesn't involve the kinds of 'dream cars' we imagine. Even though the subject doesn't show expressions like a human portrait model, capturing a vehicle in a creative way requires a lot of work - lighting, composition, post-production - it's a highly-skilled process, and as such, well-remunerated at the commercial level. Also known as car photography or vehicle photography, automotive photography is a deceptively challenging field. Photographers in this niche are specialists in capturing the best features of every vehicle they work with and help to build stunning photographs that speak to the emotions of the viewer. Photographers in this field typically work with car, van, truck, and other vehicle manufacturers to create advertising campaigns for their newest models. Many automotive photographers may also work with used car dealerships to build a gallery of images for websites and social media.",
         "price": "49",
@@ -105,8 +98,7 @@
         }
     },
     {
-        "id": "08",
-        "name": "Model Photography",
+        "serviceName": "Model Photography",
         "image": "https://i.ibb.co/tYZtjJD/model-Cover.jpg",
         "details": "Model photography is simply more than just photography. With the first session you arrange, you are in for a world of extra-photographic conditions. You will deal with human models and the weather is never controllable. Even if you have mastered light, camera settings and exposition, expect that a surprise will come to pose a spontaneous challenge in the least expected moment. We invite you for a deep dive into model photography, where we will have a look at both interpersonal and technical aspects of this difficult trade.",
         "price": "39",
@@ -120,8 +112,7 @@
         }
     },
     {
-        "id": "09",
-        "name": "Corporate Photography",
+        "serviceName": "Corporate Photography",
         "image": "https://i.ibb.co/FwLZpzB/corCover.jpg",
         "details": "Corporate photography is popularly known as business or commercial photography, as it is used by different business units to capture the photos of their products, services, and their organization to promote their business among the public. These days, commercial photography is becoming more and more popular because digital media is playing an important role in the area of marketing where photographs are really very important.",
         "price": "29.99",

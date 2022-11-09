@@ -1,14 +1,13 @@
 import { GoogleAuthProvider } from 'firebase/auth';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import image from '../../assets/login/login.jpg'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
-    const {providerLogin} = useContext(AuthContext);
-
+    const [error, setError] = useState('');
+    const {login,providerLogin} = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
-
     const navigate = useNavigate();
 
     const handleGoogleLogin = () => {
@@ -18,11 +17,31 @@ const Login = () => {
             console.log(user);
             navigate('/')
         })
-        .catch(err => console.error(err))
+        .catch(err => {
+            console.error(err)
+            setError(err.message);
+        })
     }
 
     const handleLogin = event => {
         event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        login(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            form.reset();
+            setError('');
+            navigate('/')
+        })  
+        .then(error => {
+            console.error(error)
+            setError(error.message);
+        });
+
     }
     return (
         <div className="hero w-full my-20">
@@ -47,6 +66,9 @@ const Login = () => {
                         </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Login" />
+                        </div>
+                        <div className='text-red-600'>
+                            {error}
                         </div>
                     </form>
                     <p className='text-center'>Don't have an account? <Link className='text-blue-600 font-bold' to='/signup'>Sign Up</Link></p>
