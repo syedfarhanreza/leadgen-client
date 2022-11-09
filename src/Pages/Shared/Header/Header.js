@@ -16,10 +16,11 @@ const Header = () => {
         <li className='font-semibold'><Link to='/services'>Services</Link></li>
         <li className='font-semibold'><Link to='/blogs'>Blogs</Link></li>
         { 
-            user?.email?
+            user?.uid?
             <>
             <li className='font-semibold'><Link to='/myreviews'>My Reviews</Link></li>
             <li className='font-semibold'><Link to='/addservice'>Add Service</Link></li>
+            <p className='text-orange-600 pl-6 pt-3'>{user?.email}</p>
             </>
             :
             <li className='font-semibold'><Link to='/login'>Login</Link></li>
