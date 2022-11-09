@@ -1,8 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { GoogleAuthProvider } from 'firebase/auth';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import image from '../../assets/login/login.jpg'
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
+    const {providerLogin} = useContext(AuthContext);
+
+    const googleProvider = new GoogleAuthProvider();
+
+    const navigate = useNavigate();
+
+    const handleGoogleLogin = () => {
+        providerLogin(googleProvider)
+        .then(res => {
+            const user = res.user;
+            console.log(user);
+            navigate('/')
+        })
+        .catch(err => console.error(err))
+    }
 
     const handleLogin = event => {
         event.preventDefault();
@@ -33,6 +50,7 @@ const Login = () => {
                         </div>
                     </form>
                     <p className='text-center'>Don't have an account? <Link className='text-blue-600 font-bold' to='/signup'>Sign Up</Link></p>
+                    <button onClick={handleGoogleLogin}>Google</button>
                 </div>
             </div>
         </div>
