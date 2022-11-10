@@ -9,7 +9,7 @@ const ServiceDetails = () => {
     const { user } = useContext(AuthContext);
     const service = useLoaderData();
     const { serviceName, details, price, image } = service;
-    const { img1, img2, img3, img4, img5, img6 } = service.more_images;
+    const moreImage = service.more_images;
     console.log(service)
     return (
         <div>
@@ -38,12 +38,12 @@ const ServiceDetails = () => {
                         <h1 className='text-5xl text-center m-10 font-black'>More Photos</h1>
                         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6'>
 
-                            <img className='h-full' src={img1} alt="" />
-                            <img className='h-full' src={img2} alt="" />
-                            <img className='h-full' src={img3} alt="" />
-                            <img className='h-full' src={img4} alt="" />
-                            <img className='h-full' src={img5} alt="" />
-                            <img className='h-full' src={img6} alt="" />
+                            <img className='h-full' src={moreImage?.img1} alt="" />
+                            <img className='h-full' src={moreImage?.img2} alt="" />
+                            <img className='h-full' src={moreImage?.img3} alt="" />
+                            <img className='h-full' src={moreImage?.img4} alt="" />
+                            <img className='h-full' src={moreImage?.img5} alt="" />
+                            <img className='h-full' src={moreImage?.img6} alt="" />
 
                         </div>
                     </div>
