@@ -50,7 +50,7 @@ const Header = () => {
            {
                 user?.uid ?
                     < >
-                        <button onClick={handleLogOut} className="btn bg-red-600">Log Out</button>
+                        <button onClick={handleLogOut} className="btn bg-red-600"><Link to='/login'>Log Out</Link></button>
                     </>
                     :
                     <></>

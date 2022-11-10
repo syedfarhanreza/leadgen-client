@@ -4,7 +4,7 @@ import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 
 const ReviewForm = () => {
-    const {_id, name, image} = useLoaderData(); 
+    const {_id, serviceName, image} = useLoaderData(); 
     const {user} = useContext(AuthContext);
     const handleAddReview = event => {
         event.preventDefault();
@@ -16,7 +16,7 @@ const ReviewForm = () => {
 
         const review = {
             service: _id,
-            serviceName: name,
+            serviceName,
             reviewer: fullName,
             email,
             photoURL,
@@ -45,7 +45,7 @@ const ReviewForm = () => {
     return (
         <div>
             <div className='bg-gray-900 m-12 p-12 lg:mx-80 rounded-3xl'>
-            <h1 className='text-white text-center font-black text-3xl my-5'>ADD YOUR OWN REVIEW</h1>
+            <h1 className='text-white text-center font-black text-3xl my-5'>ADD YOUR REVIEW</h1>
             <form onSubmit={handleAddReview} className="space-y-4 md:space-y-6 px-20 py-12">
                 <div>
                     <label htmlFor="fullName" className="block mb-2 text-sm font-medium text-white">Your Name</label>

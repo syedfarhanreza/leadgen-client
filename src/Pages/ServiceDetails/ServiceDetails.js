@@ -56,9 +56,10 @@ const ServiceDetails = () => {
                     user?.email ?
                         <ReviewForm></ReviewForm>
                         :
-                        <>
-                            <Link to='/login'>Login Here</Link>
-                        </>
+                        <div className='justify-center pl-20 justify-items-center w-1/2 mx-auto mt-5 mb-10'>
+                            <p className='text-red-600 text-xl mb-2'>To add your review, you need to <button className="btn btn-active btn-primary"><Link to='/login'>Login !!!</Link></button></p>
+                            
+                        </div>
                 }
             </section>
         </div>
