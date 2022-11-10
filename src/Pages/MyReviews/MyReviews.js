@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 import Reviews from './Reviews';
 
 const MyReviews = () => {
+    useTitle('LeadGen-MyReviews');
     const { user } = useContext(AuthContext);
-    // console.log(user);
 
     const [reviews, setReview] = useState([]);
 

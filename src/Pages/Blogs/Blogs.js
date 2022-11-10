@@ -1,6 +1,8 @@
 import React from 'react';
+import useTitle from '../../Hooks/useTitle';
 
 const Blogs = () => {
+    useTitle('LeadGen-Blogs');
     return (
         <div>
             <div className="card w-11/12 bg-black text-white-content mt-10 mx-auto">

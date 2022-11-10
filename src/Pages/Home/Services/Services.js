@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import useTitle from '../../../Hooks/useTitle';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
+    useTitle('LeadGen-Services');
     const [services, setServices] = useState([]);
     const location = useLocation()
     useEffect( () => {
