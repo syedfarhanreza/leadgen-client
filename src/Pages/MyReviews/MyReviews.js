@@ -42,6 +42,9 @@ const MyReviews = () => {
         <div>
             <div className='grid lg:grid-cols-2 justify-items-center gap-10 my-20 lg:mx-48'>
                 {
+                    reviews.length < 1 ? 
+                    <h1 className='text-6xl text-orange-600'>No Reviews !!!</h1>
+                    :
                     reviews.map(review => <Reviews
                         key={review._id}
                         review={review}
