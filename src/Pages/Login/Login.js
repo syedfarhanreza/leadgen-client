@@ -4,9 +4,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import image from '../../assets/login/login.jpg'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { FcGoogle} from 'react-icons/fc';
+import useTitle from '../../Hooks/useTitle';
 
 
 const Login = () => {
+    useTitle('LeadGen-Login');
     const [error, setError] = useState('');
     const {login,providerLogin} = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();

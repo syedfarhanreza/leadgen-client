@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
@@ -33,6 +33,17 @@ const Services = () => {
                         )
                 }
             </div>
+            {
+                    location.pathname === '/' ?
+                        
+                    <div className='justify-center pl-28 justify-items-center w-1/4 mx-auto mt-10'>
+                    <button className='btn btn-accent'><Link to='/services'>See All Services</Link></button>
+                    </div>
+                        
+                        :
+                    <>
+                    </>
+                }
         </div>
     );
 };

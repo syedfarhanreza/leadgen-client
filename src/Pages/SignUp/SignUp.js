@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import image from '../../assets/login/login.jpg'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const SignUp = () => {
+    useTitle('LeadGen-SignUp');
     const {createUser} = useContext(AuthContext);
     const navigate = useNavigate();
     const handleSignUp = event => {

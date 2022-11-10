@@ -4,26 +4,26 @@ import logo from '../../../assets/logo.png'
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
-    const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const handleLogOut = () => {
         logOut()
-          .then(() => { })
-          .catch(error => console.error(error))
-      }
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
     const menuItems = <>
         <li className='font-semibold'><Link to='/'>Home</Link></li>
         <li className='font-semibold'><Link to='/services'>Services</Link></li>
         <li className='font-semibold'><Link to='/blogs'>Blogs</Link></li>
-        { 
-            user?.uid?
-            <>
-            <li className='font-semibold'><Link to='/myreviews'>My Reviews</Link></li>
-            <li className='font-semibold'><Link to='/addservice'>Add Service</Link></li>
-            <p className='text-orange-600 pl-6 pt-3'>{user?.email}</p>
-            </>
-            :
-            <li className='font-semibold'><Link to='/login'>Login</Link></li>
+        {
+            user?.uid ?
+                <>
+                    <li className='font-semibold'><Link to='/myreviews'>My Reviews</Link></li>
+                    <li className='font-semibold'><Link to='/addservice'>Add Service</Link></li>
+                    <p className='text-orange-600 pl-6 pt-3'>{user?.email}</p>
+                </>
+                :
+                <li className='font-semibold'><Link to='/login'>Login</Link></li>
         }
     </>
     return (
@@ -46,9 +46,16 @@ const Header = () => {
                     {menuItems}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <button onClick={handleLogOut} className="btn bg-red-600">Log Out</button>
-            </div>
+           <div className="navbar-end">
+           {
+                user?.uid ?
+                    < >
+                        <button onClick={handleLogOut} className="btn bg-red-600">Log Out</button>
+                    </>
+                    :
+                    <></>
+            }
+           </div>
         </div>
     );
 };
