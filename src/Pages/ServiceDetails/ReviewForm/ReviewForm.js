@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 
 const ReviewForm = () => {
     const {_id, serviceName, image} = useLoaderData(); 
     const {user} = useContext(AuthContext);
+    const navigate = useNavigate();
     const handleAddReview = event => {
         event.preventDefault();
         const form = event.target;
@@ -37,6 +38,7 @@ const ReviewForm = () => {
                 if (data.acknowledged) {
                     alert('Review Done');
                     form.reset();
+                    navigate(`/services/${_id}`);
                 }
             })
             .catch(e => console.error(e))

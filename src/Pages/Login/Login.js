@@ -10,7 +10,7 @@ import useTitle from '../../Hooks/useTitle';
 const Login = () => {
     useTitle('LeadGen-Login');
     const [error, setError] = useState('');
-    const { login, providerLogin } = useContext(AuthContext);
+    const { login, providerLogin,loading} = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const location = useLocation();
     const navigate = useNavigate();
@@ -82,6 +82,11 @@ const Login = () => {
                 setError(error.message);
             });
 
+    }
+    if(loading){
+        return <div className='justify-center pl-28 justify-items-center w-1/4 mx-auto mt-10 mb-10'>
+            <button className="btn loading">loading</button>
+        </div>
     }
     return (
         <div className="hero w-full my-20">

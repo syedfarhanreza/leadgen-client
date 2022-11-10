@@ -6,7 +6,7 @@ import useTitle from '../../Hooks/useTitle';
 
 const SignUp = () => {
     useTitle('LeadGen-SignUp');
-    const {createUser} = useContext(AuthContext);
+    const {createUser,loading} = useContext(AuthContext);
     const navigate = useNavigate();
     const handleSignUp = event => {
         event.preventDefault();
@@ -18,10 +18,15 @@ const SignUp = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
-            navigate('/login');
+            navigate('/');
         })
         .catch(err => console.error(err));
 
+    }
+    if(loading){
+        return <div className='justify-center pl-28 justify-items-center w-1/4 mx-auto mt-10 mb-10'>
+            <button className="btn loading">loading</button>
+        </div>
     }
     return (
         <div className="hero w-full my-20">

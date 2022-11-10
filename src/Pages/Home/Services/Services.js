@@ -1,17 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../Hooks/useTitle';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
     useTitle('LeadGen-Services');
     const [services, setServices] = useState([]);
+    const {loading} = useContext(AuthContext);
     const location = useLocation()
     useEffect( () => {
         fetch('http://localhost:5000/services')
         .then(res => res.json())
         .then(data => setServices(data))
-    },[])
+    },[]);
+    if(loading){
+        return <div className='justify-center pl-28 justify-items-center w-1/4 mx-auto mt-10 mb-10'>
+            <button className="btn loading">loading</button>
+        </div>
+    }
     return (
         <div className='mt-10'>
             <div className='text-center'>

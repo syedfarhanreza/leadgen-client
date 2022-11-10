@@ -11,7 +11,7 @@ const ServiceDetails = () => {
     const service = useLoaderData();
     const { serviceName, details, price, image } = service;
     const moreImage = service.more_images;
-    console.log(service.reviews);
+    const reviews = service.reviews;
 
     return (
         <div>
@@ -55,7 +55,7 @@ const ServiceDetails = () => {
             <section>
                 <div className='grid lg:grid-cols-3 justify-items-center gap-10 my-20 lg:mx-48'>
                     {
-                        service.reviews.map(review => <AllReviews
+                        [...reviews].reverse().map(review => <AllReviews
                             key={review._id}
                             review={review}
                         ></AllReviews>)
