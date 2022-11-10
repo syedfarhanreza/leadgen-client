@@ -10,7 +10,7 @@ const Services = () => {
     const {loading} = useContext(AuthContext);
     const location = useLocation()
     useEffect( () => {
-        fetch('http://localhost:5000/services')
+        fetch('https://leadgen-server.vercel.app/services')
         .then(res => res.json())
         .then(data => setServices(data))
     },[]);

@@ -26,7 +26,7 @@ const Login = () => {
                     email: res.user?.email
                 }
 
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://leadgen-server.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -60,7 +60,7 @@ const Login = () => {
                 console.log(currentUser);
 
                 // get jwt token
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://leadgen-server.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

@@ -4,20 +4,27 @@ import useTitle from '../../Hooks/useTitle';
 import Reviews from './Reviews';
 
 const MyReviews = () => {
-    useTitle('LeadGen-MyReviews');
+    useTitle('MyReviews');
+
     const { user } = useContext(AuthContext);
+    // console.log(user);
 
     const [reviews, setReview] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+        fetch(`https://leadgen-server.vercel.app/reviews?email=${user.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setReview(data))
-    }, [user?.email]);
+    }, [user?.email])
+
     const handleDelete = id => {
         const proceed = window.confirm('Are You Sure?');
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://leadgen-server.vercel.app/reviews/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
