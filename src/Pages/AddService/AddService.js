@@ -25,7 +25,7 @@ const AddService = () => {
             price
         }
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://leadgen-server.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -36,7 +36,7 @@ const AddService = () => {
             .then(data => {
                 console.log(data);
                 if (data.acknowledged) {
-                    alert('Review Done');
+                    alert('Service Added');
                     form.reset();
                     navigate('/services');
                 }
