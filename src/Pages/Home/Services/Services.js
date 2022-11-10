@@ -28,7 +28,7 @@ const Services = () => {
             {
                     location.pathname === '/' ?
                         (
-                            services.slice(0, 3).map(service => <ServiceCard
+                            [...services].reverse().slice(0, 3).map(service => <ServiceCard
                                 key={service._id}
                                 service={service}
                             ></ServiceCard>)
