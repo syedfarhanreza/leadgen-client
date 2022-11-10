@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import image from '../../assets/login/login.jpg'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/useTitle';
@@ -8,6 +8,9 @@ const SignUp = () => {
     useTitle('LeadGen-SignUp');
     const {createUser,loading} = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
@@ -15,12 +18,29 @@ const SignUp = () => {
         const password = form.password.value;
 
         createUser(email,password)
-        .then(result => {
-            const user = result.user;
-            console.log(user);
-            navigate('/');
+        .then(res => {
+            console.log(res.user)
+
+            const currentUser = {
+                email: res.user?.email
+            }
+
+            fetch('https://leadgen-server.vercel.app/jwt', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(currentUser)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    localStorage.setItem('token', data.token);
+                })
+
+                navigate(from, { replace: true });
         })
-        .catch(err => console.error(err));
+        .catch(e => console.error(e))
 
     }
     if(loading){
