@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import AllReviews from '../AllReviews/AllReviews';
 import ReviewForm from './ReviewForm/ReviewForm';
 
 
@@ -10,7 +11,8 @@ const ServiceDetails = () => {
     const service = useLoaderData();
     const { serviceName, details, price, image } = service;
     const moreImage = service.more_images;
-    console.log(service)
+    console.log(service.reviews);
+
     return (
         <div>
             <section>
@@ -51,7 +53,14 @@ const ServiceDetails = () => {
                 </section>
             </section>
             <section>
-
+                <div className='grid lg:grid-cols-3 justify-items-center gap-10 my-20 lg:mx-48'>
+                    {
+                        service.reviews.map(review => <AllReviews
+                            key={review._id}
+                            review={review}
+                        ></AllReviews>)
+                    }
+                </div>
                 {
                     user?.email ?
                         <ReviewForm></ReviewForm>
